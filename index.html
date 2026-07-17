@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xinyu Tang</title>
+<meta name="description" content="Xinyu Tang — researcher in reinforcement learning and on-policy distillation for large language models at Evermind AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFBF9;
+    --ink:#1A1D24;
+    --ink-soft:#4A4E58;
+    --ink-faint:#8A8E98;
+    --accent:#2D6B6B;
+    --accent-soft:#EAF1F0;
+    --rule:#E4E3DD;
+    --serif:'Newsreader', Georgia, serif;
+    --sans:'Inter', -apple-system, system-ui, sans-serif;
+    --mono:'IBM Plex Mono', 'SF Mono', Menlo, monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.6;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .wrap{
+    max-width:720px;
+    margin:0 auto;
+    padding:clamp(3rem,9vw,6.5rem) clamp(1.4rem,5vw,2rem) 4rem;
+  }
+
+  /* ---- Masthead ---- */
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:1.1rem;
+  }
+  h1{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(2.8rem,9vw,4.2rem);
+    line-height:1.02;
+    letter-spacing:-.015em;
+    margin-bottom:.5rem;
+  }
+  .affil{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(1.05rem,3.5vw,1.25rem);
+    color:var(--ink-soft);
+    font-weight:400;
+  }
+
+  /* ---- Contact card (the part OpenReview needs to read) ---- */
+  .card{
+    margin-top:2.4rem;
+    border:1px solid var(--rule);
+    border-radius:10px;
+    background:#fff;
+    padding:1.4rem 1.5rem;
+  }
+  .card dl{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:.55rem 1.5rem;
+    align-items:baseline;
+  }
+  .card dt{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    padding-top:.15rem;
+  }
+  .card dd{
+    font-family:var(--mono);
+    font-size:.94rem;
+    color:var(--ink);
+    word-break:break-all;
+  }
+  .card dd a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s;}
+  .card dd a:hover{border-color:var(--accent);}
+
+  /* ---- Section ---- */
+  section{margin-top:3.2rem;}
+  .label{
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+    margin-bottom:1.3rem;
+  }
+  .label::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--rule);
+  }
+  p.lead{
+    font-family:var(--serif);
+    font-size:1.28rem;
+    line-height:1.5;
+    color:var(--ink);
+    margin-bottom:1.4rem;
+  }
+  p{color:var(--ink-soft);margin-bottom:1.1rem;}
+  p:last-child{margin-bottom:0;}
+  .topics{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.55rem;
+    margin-top:1.6rem;
+  }
+  .topics span{
+    font-family:var(--mono);
+    font-size:.78rem;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:.35rem .7rem;
+    border-radius:5px;
+  }
+
+  /* ---- Footer ---- */
+  footer{
+    margin-top:4rem;
+    padding-top:1.6rem;
+    border-top:1px solid var(--rule);
+    font-family:var(--mono);
+    font-size:.75rem;
+    color:var(--ink-faint);
+    letter-spacing:.03em;
+  }
+
+  a.mail-inline{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--rule);}
+  a.mail-inline:hover{border-color:var(--accent);}
+
+  @media (prefers-reduced-motion: no-preference){
+    .wrap > *{animation:rise .6s cubic-bezier(.2,.6,.2,1) backwards;}
+    .wrap > *:nth-child(2){animation-delay:.05s;}
+    .wrap > *:nth-child(3){animation-delay:.1s;}
+    .card{animation-delay:.15s;}
+    section{animation-delay:.2s;}
+    @keyframes rise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="eyebrow">Evermind AI · Post-Training Research</div>
+    <h1>Xinyu Tang</h1>
+    <div class="affil">Researcher, reinforcement learning &amp; model distillation</div>
+
+    <div class="card">
+      <dl>
+        <dt>Name</dt>
+        <dd>Xinyu Tang</dd>
+        <dt>Email</dt>
+        <dd><a href="mailto:xinyu.tang@evermind.ai">xinyu.tang@evermind.ai</a></dd>
+        <dt>Affiliation</dt>
+        <dd>Evermind AI</dd>
+      </dl>
+    </div>
+
+    <section>
+      <div class="label">Research</div>
+      <p class="lead">I work on post-training methods that make large language models reason and act more reliably.</p>
+      <p>My focus is reinforcement learning for LLMs and on-policy distillation — training models along their own sampled trajectories rather than fixed targets. A recurring thread in my work is credit assignment in reasoning models: how to attribute a final outcome back to the individual tokens and steps that produced it, drawing on ideas like eligibility traces and temporal-difference learning adapted to the language-model setting.</p>
+      <p>I also build the training infrastructure this research depends on, and work on LLM agents and personalization — internalizing user preferences and tool-use behavior into model weights.</p>
+      <div class="topics">
+        <span>RL post-training</span>
+        <span>on-policy distillation</span>
+        <span>credit assignment</span>
+        <span>LLM agents</span>
+        <span>personalization</span>
+      </div>
+    </section>
+
+    <footer>
+      Xinyu Tang · <a class="mail-inline" href="mailto:xinyu.tang@evermind.ai">xinyu.tang@evermind.ai</a> · Evermind AI
+    </footer>
+  </main>
+</body>
+</html>
